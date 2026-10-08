@@ -1,1 +1,145 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexGuild | Updates</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #0b0e17;
+  color: #f5f6ff;
+  font-family: Arial, sans-serif;
+}
+header {
+  padding: 22px 8%;
+  border-bottom: 1px solid #252b3d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.logo {
+  color: #6875ff;
+  font-size: 24px;
+  font-weight: bold;
+}
+nav {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+nav a {
+  color: #a1a9c0;
+  text-decoration: none;
+}
+nav a:hover { color: white; }
+main {
+  max-width: 900px;
+  margin: 70px auto;
+  padding: 0 20px;
+}
+h1 { font-size: 42px; margin-bottom: 12px; }
+.subtitle {
+  color: #a1a9c0;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+.update {
+  background: #151a29;
+  border: 1px solid #282e42;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+.update-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.update h2 { margin: 0; font-size: 23px; }
+.date { color: #a1a9c0; font-size: 14px; }
+.tag {
+  display: inline-block;
+  background: #262e58;
+  color: #b5bcff;
+  padding: 6px 11px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-top: 15px;
+}
+.update ul {
+  padding-left: 22px;
+  color: #c2c8db;
+  line-height: 1.9;
+}
+footer {
+  text-align: center;
+  border-top: 1px solid #252b3d;
+  padding: 35px;
+  color: #a1a9c0;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">NexGuild</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="commands.html">Commands</a>
+    <a href="status.html">Status</a>
+    <a href="updates.html">Updates</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Product Updates</h1>
+  <p class="subtitle">
+    Follow NexGuild's development, new features,
+    improvements, and upcoming changes.
+  </p>
+
+  <article class="update">
+    <div class="update-header">
+      <h2>Development Update</h2>
+      <span class="date">October 7, 2026</span>
+    </div>
+    <span class="tag">IN DEVELOPMENT</span>
+    <ul>
+      <li>Global slash commands enabled for public servers.</li>
+      <li>Server-specific settings introduced.</li>
+      <li>Suggestion voting with YES/NO buttons and a visual results bar.</li>
+      <li>Moderation purge command added.</li>
+      <li>Official NexGuild website launched.</li>
+    </ul>
+  </article>
+
+  <article class="update">
+    <div class="update-header">
+      <h2>What's Next?</h2>
+      <span class="date">Planned</span>
+    </div>
+    <span class="tag">ROADMAP</span>
+    <ul>
+      <li>More moderation and management features.</li>
+      <li>Improvements to verification setup.</li>
+      <li>Expanded command documentation.</li>
+      <li>Automatic service status monitoring.</li>
+    </ul>
+  </article>
+</main>
+
+<footer>
+  © 2026 NexGuild. All rights reserved.
+</footer>
+
+</body>
+</html>
+
