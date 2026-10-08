@@ -4,103 +4,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NexGuild | Status</title>
+<title>NexGuild | Bot Status</title>
+
 <style>
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  background: #0b0e17;
-  color: #f5f6ff;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    background: #0b0e17;
+    color: #f5f6ff;
+    font-family: Arial, sans-serif;
 }
+
 header {
-  padding: 24px 8%;
-  border-bottom: 1px solid #252b3d;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+    padding: 22px 8%;
+    border-bottom: 1px solid #252b3d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
+
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #6875ff;
+    color: #6875ff;
+    font-size: 24px;
+    font-weight: bold;
 }
-a { color: #a1a9c0; text-decoration: none; }
-a:hover { color: white; }
-nav { display: flex; gap: 20px; flex-wrap: wrap; }
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #a1a9c0;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: white;
+}
+
 main {
-  max-width: 950px;
-  margin: 70px auto;
-  padding: 0 20px;
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 20px;
 }
-h1 { font-size: 42px; margin-bottom: 10px; }
-.subtitle { color: #a1a9c0; margin-bottom: 35px; }
-.notice {
-  background: #151a29;
-  border: 1px solid #30384e;
-  border-radius: 12px;
-  padding: 22px;
-  margin-bottom: 30px;
+
+h1 {
+    font-size: 44px;
+    margin-bottom: 12px;
 }
-.card {
-  background: #151a29;
-  border: 1px solid #282e42;
-  border-radius: 12px;
-  padding: 22px;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
+
+.subtitle {
+    color: #a1a9c0;
+    line-height: 1.6;
+    margin-bottom: 35px;
 }
-.status {
-  color: #a1a9c0;
-  font-size: 14px;
-  font-weight: bold;
+
+.status-card {
+    background: #151a29;
+    border: 1px solid #282e42;
+    border-radius: 14px;
+    padding: 30px;
+    margin-bottom: 25px;
 }
+
+.status-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bot-name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #a1a9c0;
+    font-weight: bold;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #8992a8;
+}
+
+.status-description {
+    margin-top: 20px;
+    color: #a1a9c0;
+    line-height: 1.7;
+}
+
+.info-card {
+    background: #151a29;
+    border: 1px solid #282e42;
+    border-radius: 14px;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+.info-card h2 {
+    margin-top: 0;
+    font-size: 21px;
+}
+
+.info-card p {
+    color: #a1a9c0;
+    line-height: 1.7;
+}
+
 footer {
-  text-align: center;
-  color: #a1a9c0;
-  padding: 40px;
+    text-align: center;
+    border-top: 1px solid #252b3d;
+    padding: 35px;
+    color: #a1a9c0;
+    margin-top: 90px;
+}
+
+@media (max-width: 600px) {
+    main {
+        margin-top: 45px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .status-card {
+        padding: 22px;
+    }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-  <div class="logo">NexGuild</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="commands.html">Commands</a>
-    <a href="status.html">Status</a>
-    <a href="updates.html">Updates</a>
-    <a href="support.html">Support</a>
-  </nav>
+    <div class="logo">NexGuild</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="commands.html">Commands</a>
+        <a href="status.html">Status</a>
+        <a href="updates.html">Updates</a>
+        <a href="support.html">Support</a>
+    </nav>
 </header>
 
-
 <main>
-  <h1>NexGuild Status</h1>
-  <p class="subtitle">
-    Check the availability of the NexGuild Discord bot.
-  </p>
 
-  <div class="notice">
-    <strong>Automatic monitoring coming soon.</strong>
-    <p class="subtitle" style="margin:10px 0 0">
-      Bot availability is not currently monitored.
+    <h1>Bot Status</h1>
+
+    <p class="subtitle">
+        Check the current availability of NexGuild.
     </p>
-  </div>
 
-  <div class="card">
-    <strong>NexGuild Bot</strong>
-    <span class="status">Not monitored</span>
-  </div>
+    <div class="status-card">
+
+        <div class="status-header">
+
+            <div class="bot-name">
+                NexGuild Bot
+            </div>
+
+            <div class="status-indicator">
+                <span class="dot"></span>
+                Not Monitored
+            </div>
+
+        </div>
+
+        <div class="status-description">
+            Automatic status monitoring has not been
+            configured yet. Once enabled, this page
+            will display NexGuild's current availability.
+        </div>
+
+    </div>
+
+    <div class="info-card">
+        <h2>Status Monitoring</h2>
+
+        <p>
+            Live monitoring is coming soon.
+            The status will automatically update
+            when NexGuild goes online or offline
+            after a monitoring service is connected.
+        </p>
+    </div>
+
 </main>
 
-<footer>© 2026 NexGuild</footer>
+<footer>
+    © 2026 NexGuild. All rights reserved.
+</footer>
 
 </body>
 </html>
