@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexGuild | Status</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #0b0e17;
+  color: #f5f6ff;
+  font-family: Arial, sans-serif;
+}
+header {
+  padding: 24px 8%;
+  border-bottom: 1px solid #252b3d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6875ff;
+}
+a { color: #a1a9c0; text-decoration: none; }
+a:hover { color: white; }
+nav { display: flex; gap: 20px; flex-wrap: wrap; }
+main {
+  max-width: 950px;
+  margin: 70px auto;
+  padding: 0 20px;
+}
+h1 { font-size: 42px; margin-bottom: 10px; }
+.subtitle { color: #a1a9c0; margin-bottom: 35px; }
+.notice {
+  background: #151a29;
+  border: 1px solid #30384e;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 30px;
+}
+.card {
+  background: #151a29;
+  border: 1px solid #282e42;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.status {
+  color: #a1a9c0;
+  font-size: 14px;
+  font-weight: bold;
+}
+footer {
+  text-align: center;
+  color: #a1a9c0;
+  padding: 40px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">NexGuild</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="commands.html">Commands</a>
+    <a href="status.html">Status</a>
+    <a href="updates.html">Updates</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
+
+<main>
+  <h1>System Status</h1>
+  <p class="subtitle">Service availability and incident information.</p>
+
+  <div class="notice">
+    <strong>Live monitoring is not configured yet.</strong>
+    <p class="subtitle" style="margin:10px 0 0">
+      The statuses below are placeholders until monitoring is connected.
+    </p>
+  </div>
+
+  <div class="card">
+    <strong>NexGuild Bot</strong>
+    <span class="status">Not monitored</span>
+  </div>
+
+  <div class="card">
+    <strong>Slash Commands</strong>
+    <span class="status">Not monitored</span>
+  </div>
+
+  <div class="card">
+    <strong>Verification System</strong>
+    <span class="status">Not monitored</span>
+  </div>
+
+  <div class="card">
+    <strong>Suggestion System</strong>
+    <span class="status">Not monitored</span>
+  </div>
+
+  <div class="card">
+    <strong>Website</strong>
+    <span class="status">Not monitored</span>
+  </div>
+</main>
+
+<footer>© 2026 NexGuild</footer>
+
+</body>
+</html>
