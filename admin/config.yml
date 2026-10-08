@@ -1,0 +1,49 @@
+
+backend:
+  name: github
+  repo: JJackthegoat/NexGuild-Website
+  branch: main
+
+media_folder: "images"
+public_folder: "/NexGuild-Website/images"
+
+collections:
+  - name: commands
+    label: Commands
+    folder: "_commands"
+    create: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: "Command Name", name: "name", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - Moderation
+          - Verification
+          - Suggestions
+          - Utility
+      - { label: "Required Permission", name: "permission", widget: "string" }
+
+  - name: updates
+    label: Updates
+    folder: "_updates"
+    create: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Content", name: "content", widget: "text" }
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options:
+          - New Feature
+          - Bug Fix
+          - Improvement
+          - Announcement
