@@ -1,0 +1,6 @@
+{
+  "name": "/ping",
+  "description": "Check whether NexGuild is responding.",
+  "category": "Utility",
+  "permission": "every"
+}
