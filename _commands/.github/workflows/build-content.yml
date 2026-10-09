@@ -1,0 +1,74 @@
+
+name: Build NexGuild Content
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "_commands/**"
+      - "_updates/**"
+      - ".github/workflows/build-content.yml"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate website data
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          Path("data").mkdir(exist_ok=True)
+
+          collections = {
+              "_commands": "data/commands.json",
+              "_updates": "data/updates.json"
+          }
+
+          for source, destination in collections.items():
+              entries = []
+
+              for file in sorted(Path(source).glob("*.json")):
+                  try:
+                      with file.open(encoding="utf-8") as f:
+                          entries.append(json.load(f))
+                  except (ValueError, OSError) as error:
+                      print(f"Error reading {file}: {error}")
+                      raise
+
+              if source == "_updates":
+                  entries.sort(
+                      key=lambda entry: entry.get("date", ""),
+                      reverse=True
+                  )
+
+              with open(destination, "w", encoding="utf-8") as f:
+                  json.dump(entries, f, indent=2, ensure_ascii=False)
+
+              print(f"Generated {destination}: {len(entries)} entries")
+          PY
+
+      - name: Commit generated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/commands.json data/updates.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update NexGuild website data"
+            git push
+          fi
