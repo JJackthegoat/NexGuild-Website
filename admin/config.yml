@@ -1,9 +1,7 @@
 
 backend:
-  name: github
-  repo: JJackthegoat/NexGuild-Website
+  name: git-gateway
   branch: main
-
 media_folder: "images"
 public_folder: "/NexGuild-Website/images"
 
